@@ -2,10 +2,12 @@ import logging
 import socket
 import threading
 
+from .helpers import find_free_port, get_host
+
 logger = logging.getLogger(__name__)
 
-HOST = "127.0.0.1"
-PORT = 1234
+HOST = get_host()
+PORT = find_free_port()
 
 
 def listen_for_messages_from_server(client):
@@ -50,7 +52,8 @@ def main():
         print(f"Client is connected to {HOST} {PORT}")
     except socket.error as error_msg:
         logger.warning(
-            f"Unable to connect to server host {HOST} and port {PORT}. Reason: {error_msg}"
+            f"Unable to connect to server host {HOST} and port {PORT}. Reason: "
+            f"{error_msg}"
         )
 
     communicate_to_server(client)

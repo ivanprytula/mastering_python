@@ -1,14 +1,15 @@
+import logging
 import socket
 import threading
-import logging
-from typing import Optional
+
+from .helpers import find_free_port, get_host
 
 # create logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-HOST = "127.0.0.1"
-PORT = 1234
+HOST = get_host()
+PORT = find_free_port()
 LISTENER_LIMIT = 5
 
 active_clients = []
