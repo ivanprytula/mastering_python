@@ -2,3 +2,12 @@
 .vscode
 
 __pycache__/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.pytest_cache/
+
+# mypy
+.mypy_cache/
