@@ -1,0 +1,9 @@
+[flake8]
+min_python_version = 3.9.0
+
+# https://flake8.pycqa.org/en/latest/user/error-codes.html
+ignore = E203, E266, E501, W503, F403, F401
+
+max-line-length = 89
+max-complexity = 18
+select = B,C,E,F,W,T4,B9
