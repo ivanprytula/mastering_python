@@ -1,0 +1,7 @@
+Options:
+1. Syntax
+2. Built-in data types
+3. Iterators
+4. Comprehensions
+5. Collections
+...
