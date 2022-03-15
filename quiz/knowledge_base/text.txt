@@ -1,5 +1,0 @@
-for
-in
-with
-class
-def main():
