@@ -30,3 +30,10 @@ black --diff --color main.py
 black .
 ```
 https://naereen.github.io/badges/
+
+
+## Use bandit
+
+```shell
+bandit -c pyproject.toml -r quiz/
+```
