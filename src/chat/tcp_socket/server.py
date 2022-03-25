@@ -64,13 +64,7 @@ def client_handler(client: socket.socket) -> None:
         else:
             logger.warning("Client username is empty")
 
-    threading.Thread(
-        target=listen_for_messages,
-        args=(
-            client,
-            username,
-        ),
-    ).start()
+    threading.Thread(target=listen_for_messages, args=(client, username)).start()
 
 
 def main() -> None:

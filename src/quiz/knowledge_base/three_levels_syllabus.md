@@ -1,4 +1,4 @@
-# PCEP – Certified Entry-Level Python Programmer PCEP-30-01
+# PCEP – Certified Entry-Level Python Programmer PCEP-30-0x
 
 ## Objectives
 1. The fundamentals of computer programming, i.e.:
@@ -232,9 +232,9 @@
   newline character translation, reading and writing files, **bytearray** objects
 - **read(), readinto(), readline(), write(), close()** methods
 
-#### Syllabus PCAP-31-03 (PVTCs, OnVUE)
+### Syllabus PCAP-31-03 (PVTCs, OnVUE)
 #### Block 1: Modules and Packages
-- import variants; advanced qualifiying for nested modules
+- import variants; advanced qualifying for nested modules
 - dir(); sys.path variable
 - math: ceil(), floor(), trunc(), factorial(), hypot(), sqrt(); random: random(), seed(), choice(), sample()
 - platform: platform(), machine(), processor(), system(), version(), python_implementation(), python_version_tuple()
@@ -272,7 +272,7 @@
 - __name__, __module__, __bases__ properties, __str__() method
 - multiple inheritance, diamonds
 
-#### Another Syllabus. Block 5: Miscellaneous (List Comprehensions, Lambdas, Closures, and I/O Operations)
+#### Block 5: Miscellaneous (List Comprehensions, Lambdas, Closures, and I/O Operations)
 - list comprehension: if operator, using list comprehensions
 - lambdas: defining and using lambdas, self-defined functions taking lambda as as arguments; map(), filter();
 - closures: meaning, defining, and using closures
@@ -284,7 +284,7 @@
 ---
 
 # PCPP1 – Certified Professional in Python Programming 1 PCPP-32-10x
-### Syllabus
+### Syllabus PCPP-32-101
 #### Block 1: Advanced Perspective of Classes and OOP in Python
 - Classes, Instances, Attributes, Methods;
 - Working with class and instance data;
@@ -347,7 +347,7 @@
     - _time_ – time access and conversions.
 
 # PCPP2 – Certified Professional in Python Programming 2 PCPP-32-20x
-### Syllabus
+### Syllabus PCPP-32-201
 #### Block 1: Creating and Distributing Packages
 - Using _pip_
 - Basic directory structure
@@ -399,6 +399,8 @@
     - db read
     - db update
     - db delete
+
+---
 
 # PYTHON ITA CERTIFICATION
 ## Python Web / Integration Certifications

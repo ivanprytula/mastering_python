@@ -37,3 +37,18 @@ https://naereen.github.io/badges/
 ```shell
 bandit -c pyproject.toml -r quiz/
 ```
+
+## Use pytest
+```shell
+# run all tests
+$ python -m pytest tests
+
+# run tests in `chat` directory
+$ python -m pytest tests/chat
+
+# run only the quiz tests
+$ python -m pytest tests/quiz/test_question_models.py
+
+# run 2 tests concurrently
+python -m pytest tests -n 2
+```

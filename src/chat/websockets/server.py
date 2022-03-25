@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import asyncio
-import websockets
+from websockets.server import serve  # type: ignore[attr-defined]
 
 
 async def hello(websocket):
@@ -15,7 +15,7 @@ async def hello(websocket):
 
 
 async def main():
-    async with websockets.serve(hello, "localhost", 8765):
+    async with serve(hello, "localhost", 8765):
         await asyncio.Future()  # run forever
 
 
