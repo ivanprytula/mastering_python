@@ -1,5 +1,5 @@
 """
-Scipt for playing with classes - Object Oriented Programming
+Script for playing with classes - Object-Oriented Programming
 """
 
 

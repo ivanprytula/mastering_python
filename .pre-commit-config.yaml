@@ -35,4 +35,7 @@ repos:
                 "--non-interactive",
                 "--show-error-codes",
                 "--pretty",
+                "--no-warn-no-return",
+                "--disable-error-code", "assignment",
+                "--disable-error-code", "index",
         ]

@@ -6,9 +6,8 @@ class TestLevelSyllabus:
         assert "Basic Concepts" in syllabus.get_blocks_titles()
 
     def test_block_items(self, syllabus):
-        assert [["short desc/keywords", "long desc"]] == syllabus.get_block_items(
-            "Basic Concepts"
-        )
+        print(syllabus.get_block_items("Basic Concepts"))
+        assert "description/keywords" in syllabus.get_block_items("Basic Concepts")
 
     def test_block_status(self, syllabus):
         assert syllabus.get_block_status()

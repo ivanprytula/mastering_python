@@ -16,7 +16,7 @@ def syllabus() -> LevelSyllabus:
                 {
                     "oder": 1,
                     "title": "Basic Concepts",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "items": ["description/keywords", "description 2/keywords 2"],
                 }
             ],
         }

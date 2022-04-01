@@ -21,13 +21,7 @@ template_level_syllabus: list[dict] = [
     {
         "PCEP-30-0x": {
             "status": "...",
-            "blocks": [
-                {
-                    "oder": 1,
-                    "title": "...",
-                    "items": [["short description/keywords", "long description"]],
-                }
-            ],
+            "blocks": [{"oder": 1, "title": "...", "items": ["description/keywords"]}],
         }
     }
 ]
@@ -41,47 +35,32 @@ junior_level_syllabuses = [
                     "oder": 1,
                     "title": "Basic Concepts",
                     "items": [
-                        [
-                            "fundamental concepts",
-                            "fundamental concepts: interpreting and the interpreter, "
-                            "compilation and the compiler",
-                        ],
-                        [
-                            "literals",
-                            "literals: Boolean, integer, floating-point numbers, "
-                            "scientific "
-                            "notation, strings",
-                        ],
-                        ["comments", "comments, inline comments"],
-                        ["print()", "the **print()** function"],
-                        ["input()", "the **input()** function"],
-                        [
-                            "numeral systems",
-                            "numeral systems (binary, octal, decimal, hexadecimal)",
-                        ],
-                        ["numeric operators", "numeric operators: ** * / % // + –"],
-                        ["string operators", "string operators: * +"],
-                        ["shortcut operators", "assignments and shortcut operators"],
+                        "fundamental concepts: interpreting and the interpreter, "
+                        "compilation and the compiler",
+                        "literals: Boolean, integer, floating-point numbers, "
+                        "scientific notation, strings",
+                        "comments, inline comments",
+                        "the **print()** function",
+                        "the **input()** function",
+                        "numeral systems (binary, octal, decimal, hexadecimal)",
+                        "numeric operators: ** * / % // + –",
+                        "string operators: * +",
+                        "assignments and shortcut operators",
                     ],
                 },
                 {
                     "oder": 2,
                     "title": "Data Types, Evaluations, and Basic I/O Operations",
                     "items": [
-                        [
-                            "operators priorities and binding",
-                            "operators: unary and binary, " "priorities and binding",
-                        ],
-                        ["bitwise operators", "bitwise operators: ~ & ^ | << >>"],
+                        "operators: unary and binary, priorities and binding",
+                        "bitwise operators: ~ & ^ | << >>",
                         "Boolean operators: **not and or**",
                         "Boolean expressions",
-                        "relational operators ( == != > >= < <= ), building "
-                        "complex "
+                        "relational operators ( == != > >= < <= ), building complex "
                         "Boolean expressions",
                         "accuracy of floating-point numbers",
                         "basic input and output operations using the **input(), "
-                        "print(), "
-                        "int(), float(), str(), len()** functions",
+                        "print(), int(), float(), str(), len()** functions",
                         "formatting **print()** output with **end=** and **sep=** "
                         "arguments",
                         "type casting",
@@ -167,24 +146,20 @@ junior_level_syllabuses = [
                 {
                     "order": 1,
                     "title": "Computer Programming and Python Fundamentals",
-                    "items": [[], [], []],
+                    "items": [],
                 },
                 {
                     "order": 2,
                     "title": "Control Flow – Conditional Blocks and Loops",
-                    "items": [[], [], []],
+                    "items": [],
                 },
                 {
                     "order": 3,
                     "title": "Data Collections – Tuples, Dictionaries, Lists, "
                     "and Strings",
-                    "items": [[], [], []],
+                    "items": [],
                 },
-                {
-                    "order": 4,
-                    "title": "Functions and Exceptions",
-                    "items": [[], [], []],
-                },
+                {"order": 4, "title": "Functions and Exceptions", "items": []},
             ],
         }
     },
@@ -199,60 +174,52 @@ intermediate_level_syllabuses = [
                     "oder": 1,
                     "title": "Control and Evaluations",
                     "items": [
-                        [
-                            "basic concepts",
-                            "basic concepts: interpreting and the interpreter, compilation "
-                            "and the compiler, language elements, lexis, syntax and "
-                            "semantics, Python keywords, instructions, indenting",
-                        ],
-                        ["short desc/keywords", "long desc"],
-                        ["short desc/keywords", "long desc"],
-                        ["short desc/keywords", "long desc"],
+                        "basic concepts: interpreting and the interpreter, "
+                        "compilation and the compiler, language elements, lexis, "
+                        "syntax and semantics, Python keywords, instructions, "
+                        "indenting",
+                        "short desc/keywords",
+                        "short desc/keywords",
+                        "short desc/keywords",
                     ],
                 },
                 {
                     "oder": 2,
                     "title": "Data Aggregates",
                     "items": [
-                        [
-                            "basic concepts",
-                            "basic concepts: interpreting and the interpreter, compilation "
-                            "and the compiler, language elements, lexis, syntax and "
-                            "semantics, Python keywords, instructions, indenting",
-                        ],
-                        ["short desc/keywords", "long desc"],
-                        ["short desc/keywords", "long desc"],
-                        ["short desc/keywords", "long desc"],
+                        "basic concepts: interpreting and the interpreter, "
+                        "compilation and the compiler, language elements, lexis, "
+                        "syntax and semantics, Python keywords, instructions, "
+                        "indenting",
+                        "short desc/keywords",
+                        "short desc/keywords",
+                        "short desc/keywords",
                     ],
                 },
                 {
                     "oder": 3,
                     "title": "Functions and Modules",
                     "items": [
-                        [
-                            "basic concepts",
-                            "basic concepts: interpreting and the interpreter, compilation "
-                            "and the compiler, language elements, lexis, syntax and "
-                            "semantics, Python keywords, instructions, indenting",
-                        ],
-                        ["short desc/keywords", "long desc"],
-                        ["short desc/keywords", "long desc"],
-                        ["short desc/keywords", "long desc"],
+                        "basic concepts: interpreting and the interpreter, "
+                        "compilation and the compiler, language elements, lexis, "
+                        "syntax and semantics, Python keywords, instructions, "
+                        "indenting",
+                        "short desc/keywords",
+                        "short desc/keywords",
+                        "short desc/keywords",
                     ],
                 },
                 {
                     "oder": 4,
                     "title": "Classes, Objects, and Exceptions",
                     "items": [
-                        [
-                            "basic concepts",
-                            "basic concepts: interpreting and the interpreter, compilation "
-                            "and the compiler, language elements, lexis, syntax and "
-                            "semantics, Python keywords, instructions, indenting",
-                        ],
-                        ["short desc/keywords", "long desc"],
-                        ["short desc/keywords", "long desc"],
-                        ["short desc/keywords", "long desc"],
+                        "basic concepts: interpreting and the interpreter, "
+                        "compilation and the compiler, language elements, lexis, "
+                        "syntax and semantics, Python keywords, instructions, "
+                        "indenting",
+                        "short desc/keywords",
+                        "short desc/keywords",
+                        "short desc/keywords",
                     ],
                 },
             ],
@@ -262,19 +229,15 @@ intermediate_level_syllabuses = [
         "PCAP-31-03": {
             "status": "(PVTCs, OnVUE)",
             "blocks": [
-                {"order": 1, "title": "Modules and Packages", "items": [[], [], []]},
-                {"order": 2, "title": "Modules and Packages", "items": [[], [], []]},
-                {"order": 3, "title": "Exceptions", "items": [[], [], []]},
-                {
-                    "order": 4,
-                    "title": "Object-Oriented Programming",
-                    "items": [[], [], []],
-                },
+                {"order": 1, "title": "Modules and Packages", "items": []},
+                {"order": 2, "title": "Modules and Packages", "items": []},
+                {"order": 3, "title": "Exceptions", "items": []},
+                {"order": 4, "title": "Object-Oriented Programming", "items": []},
                 {
                     "order": 5,
                     "title": "Miscellaneous (List Comprehensions, Lambdas, Closures, "
                     "and I/O Operations)",
-                    "items": [[], [], []],
+                    "items": [],
                 },
             ],
         }
@@ -289,29 +252,29 @@ senior_level_syllabuses = [
                 {
                     "oder": 1,
                     "title": "Advanced Perspective of Classes and OOP in Python",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "items": ["short desc/keywords"],
                 },
                 {
                     "oder": 2,
                     "title": "Python Enhancement Proposals (PEP)",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "items": ["short desc/keywords"],
                 },
                 {
                     "oder": 3,
                     "title": "GUI Programming",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "items": ["short desc/keywords"],
                 },
                 {
                     "oder": 4,
-                    "title": "The Elements of Network Programming: Working with RESTful "
-                    "APIs",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "title": "The Elements of Network Programming: Working with "
+                    "RESTful APIs",
+                    "items": ["short desc/keywords"],
                 },
                 {
                     "oder": 5,
                     "title": "File Processing and Communicating with a Program’s "
                     "Environment",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "items": ["short desc/keywords"],
                 },
             ],
         }
@@ -323,27 +286,27 @@ senior_level_syllabuses = [
                 {
                     "oder": 1,
                     "title": "Creating and Distributing Packages",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "items": ["short desc/keywords"],
                 },
                 {
                     "oder": 2,
                     "title": "Design Patterns",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "items": ["short desc/keywords"],
                 },
                 {
                     "oder": 3,
                     "title": "Interprocess Communication",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "items": ["short desc/keywords"],
                 },
                 {
                     "oder": 4,
                     "title": "Python Network Programming",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "items": ["short desc/keywords"],
                 },
                 {
                     "oder": 5,
                     "title": "Python-MySQL Database Access",
-                    "items": [["short desc/keywords", "long desc"]],
+                    "items": ["short desc/keywords"],
                 },
             ],
         }

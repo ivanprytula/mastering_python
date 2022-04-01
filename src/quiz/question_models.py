@@ -1,3 +1,6 @@
+from typing import Generator
+
+
 class LevelSyllabus:
     def __init__(self, data: dict) -> None:
         # def __init__(self, question: str, correct_answer: str, choices: list):
@@ -5,10 +8,12 @@ class LevelSyllabus:
         # self.correct_answer = correct_answer
         # self.choices = choices
 
-    def get_blocks_titles(self) -> list:
-        return [
-            block["title"] for block in self.syllabus_info[self.exam_code]["blocks"]
-        ]
+    def get_blocks_titles(self) -> Generator:
+        # return [
+        #     block["title"] for block in self.syllabus_info[self.exam_code]["blocks"]
+        # ]
+        for block in self.syllabus_info[self.exam_code]["blocks"]:
+            yield block["title"]
 
     def get_block_items(self, block_title: str) -> list:
         return [
