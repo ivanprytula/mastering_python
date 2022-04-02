@@ -138,7 +138,9 @@ class QuizInterface:
         selection_attempts = 1
         while selection_attempts <= INPUT_ATTEMPTS_LIMIT:
             try:
-                exam_menu_number = self.input_request("Select exam to practice", int)
+                exam_menu_number = self.input_request(
+                    "Select exam to test your knowledge", int
+                )
                 return self.quiz.get_exam_by_code(indexed_exams_codes[exam_menu_number])
             except KeyError:
                 selection_attempts += 1
@@ -193,7 +195,7 @@ class QuizInterface:
 
     def start_practicing(self, syllabus: LevelSyllabus):
         user_response = self.input_request(
-            f"Start practicing? {YES_NO_QUESTION_SUFFIX}"
+            f"Show questions by blocks/topics? {YES_NO_QUESTION_SUFFIX}"
         )
         if user_response in AFFIRMATIVE_RESPONSES:
 
