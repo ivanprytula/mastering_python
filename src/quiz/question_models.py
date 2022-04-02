@@ -1,4 +1,6 @@
 from typing import Generator
+from knowledge_base.exercises import *
+from knowledge_base.idioms import *
 
 
 class LevelSyllabus:
@@ -9,9 +11,6 @@ class LevelSyllabus:
         # self.choices = choices
 
     def get_blocks_titles(self) -> Generator:
-        # return [
-        #     block["title"] for block in self.syllabus_info[self.exam_code]["blocks"]
-        # ]
         for block in self.syllabus_info[self.exam_code]["blocks"]:
             yield block["title"]
 
@@ -28,3 +27,7 @@ class LevelSyllabus:
     @property
     def exam_code(self) -> str:
         return list(self.syllabus_info.keys())[0]
+
+
+class Exercise:
+    """Represents examples of: code block, expression, keyword, idioms, etc."""

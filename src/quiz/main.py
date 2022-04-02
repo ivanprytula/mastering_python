@@ -1,19 +1,16 @@
 import sys
 
 from question_models import LevelSyllabus
-from quiz_data import syllabuses_data
+from quiz_data import syllabuses_data, syllabuses_levels_full_names
 from quiz_brain import QuizBrain
 from quiz_ui import QuizInterface
 
 question_bank = []
 for syllabus in syllabuses_data:
-    # pprint(syllabus)
     new_syllabus = LevelSyllabus(syllabus)
     question_bank.append(new_syllabus)
 
-# print('question_bank:', question_bank)
-
-quiz = QuizBrain(question_bank)
+quiz = QuizBrain(question_bank, syllabuses_levels_full_names)
 
 quiz_ui = QuizInterface(quiz)
 

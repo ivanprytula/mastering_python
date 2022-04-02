@@ -130,6 +130,11 @@ class QuizInterface:
 
         self.show_as_list(self.quiz.get_exams_codes(), "as_list")
 
+        # show full names of exams as note below
+        self._horizontal_chars_deliminator("*", 1)
+        console.line(1)
+        self.show_as_list(self.quiz.get_exams_levels_full_names(), "", False)
+
         selection_attempts = 1
         while selection_attempts <= INPUT_ATTEMPTS_LIMIT:
             try:

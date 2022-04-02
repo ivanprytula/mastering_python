@@ -196,15 +196,14 @@
 - parameters vs. arguments, positional keyword and mixed argument passing, default parameter values
 - converting generator objects into lists using the **list()** function
 - name scopes, name hiding (shadowing), the **global** keyword
-- **lambda** functions, defining and using
-- **map(), filter(), reduce(), reversed(), sorted()** functions, and the **sort()** method
+- **lambda** functions, defining and using **map(), filter(), reduce(), reversed(), sorted()** functions, and the **sort()** method
 - the **if** operator
 - import directives, qualifying entities with module names, initializing modules
 - writing and using modules, the **\__name\__** variable
 - **pyc** file creation and usage
 - constructing and distributing packages, packages vs. directories, the role of the **\__init\__.py** file
 - hiding module entities
-- Python hashbangs, using multiline strings as module documentation
+- Python hashbang, using multiline strings as module documentation
 
 #### Block 4: Classes, Objects, and Exceptions
 - defining your own classes, superclasses, subclasses, inheritance,
@@ -314,11 +313,7 @@
 - Constructing a GUI – basic blocks and conventions;
 - Event-driven programming;
 - Popular GUI environments and toolkits;
-- _tkinter_  Python interface to Tcl/Tk (
-  tkinter’s application life cycle;
-  widgets, windows and events; s
-  ample applications\
-  )
+- _tkinter_  Python interface to Tcl/Tk ( tkinter’s application life cycle; widgets, windows and events; sample applications)
 - _pygame_ – a simple way of developing multimedia applications.
 
 #### Block 4: The Elements of Network Programming: Working with RESTful APIs
@@ -402,7 +397,6 @@
 
 ---
 
-# PYTHON ITA CERTIFICATION
 ## Python Web / Integration Certifications
 - Process Planning (SDLC)
 - OOD

@@ -4,10 +4,11 @@ from question_models import LevelSyllabus
 
 
 class QuizBrain:
-    def __init__(self, syllabuses: list) -> None:
+    def __init__(self, syllabuses_data: list, levels_full_names: dict) -> None:
+        self.syllabuses = syllabuses_data
+        self._levels = levels_full_names
         self.question_no = 0
         self.score = 0
-        self.syllabuses = syllabuses
         # self.current_question = None
 
     def get_exams_codes(self) -> list[str]:
@@ -20,4 +21,6 @@ class QuizBrain:
         for syllabus in self.syllabuses:
             if exam_code == syllabus.exam_code:
                 return syllabus
-        return None
+
+    def get_exams_levels_full_names(self) -> list:
+        return [self._levels[exam_code]["full_name"] for exam_code in self._levels]
