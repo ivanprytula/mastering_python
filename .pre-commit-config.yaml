@@ -1,13 +1,13 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v4.1.0
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
     -   id: check-yaml
     -   id: check-added-large-files
 -   repo: https://github.com/psf/black
-    rev: 22.1.0
+    rev: 22.3.0
     hooks:
     - id: black
 -   repo: https://github.com/pycqa/flake8
@@ -23,7 +23,7 @@ repos:
       - id: bandit
         args: ["-r", "-lll", "-ii", "-x", "tests/"]
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.940
+    rev: v0.942
     hooks:
       - id: mypy
         args: [ "--ignore-missing-imports",
