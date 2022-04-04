@@ -211,7 +211,7 @@ class QuizInterface:
                 )
         self.finish_quiz()
 
-    def finish_quiz(self):
+    def finish_quiz(self) -> None:
         self.show_headline(
             f"You tried to answer to {self.quiz.question_no} questions.",
             "@@",
@@ -220,7 +220,7 @@ class QuizInterface:
         )
         sys.exit(0)
 
-    def start_practicing(self, syllabus: LevelSyllabus):
+    def start_practicing(self, syllabus: LevelSyllabus) -> None:
         user_response = self.input_request(
             f"Show questions by blocks/topics? {YES_NO_QUESTION_SUFFIX}"
         )
@@ -244,12 +244,12 @@ class QuizInterface:
             self.show_headline("Oh, no...bye-bye!", ":((", "://", "warning")
             sys.exit(0)
 
-    def show_syllabus_blocks(self, syllabus: LevelSyllabus):
+    def show_syllabus_blocks(self, syllabus: LevelSyllabus) -> None:
         self.show_headline(f"List of {syllabus.exam_code} blocks", style_as="h2")
         self.show_as_list(syllabus.get_blocks_titles(), "as_list")
         self.start_practicing(syllabus)
 
-    def start_the_game(self):
+    def start_the_game(self) -> None:
         # console.print(syntax)
 
         self.quiz_greeting()
