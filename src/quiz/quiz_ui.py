@@ -15,6 +15,7 @@ AFFIRMATIVE_RESPONSES = ("y", "yes")
 NEGATIVE_RESPONSES = ("n", "no")
 QUIT_RESPONSES = ("q", "quit")
 YES_NO_QUESTION_SUFFIX = "yes|y / no|n"
+YES_QUIT_QUESTION_SUFFIX = "yes|y / quit|q"
 
 logger = logging.getLogger(__name__)
 
@@ -220,9 +221,13 @@ class QuizInterface:
         )
         sys.exit(0)
 
+    def quit_quiz(self) -> None:
+        self.show_headline("Oh, no...bye-bye!", ":((", "://", "warning")
+        sys.exit(0)
+
     def start_practicing(self, syllabus: LevelSyllabus) -> None:
         user_response = self.input_request(
-            f"Show questions by blocks/topics? {YES_NO_QUESTION_SUFFIX}"
+            f"Show questions by blocks/topics? {YES_QUIT_QUESTION_SUFFIX}"
         )
         if user_response in AFFIRMATIVE_RESPONSES:
 
@@ -241,8 +246,7 @@ class QuizInterface:
 
             self.show_questions_menu(syllabus)
         else:
-            self.show_headline("Oh, no...bye-bye!", ":((", "://", "warning")
-            sys.exit(0)
+            self.quit_quiz()
 
     def show_syllabus_blocks(self, syllabus: LevelSyllabus) -> None:
         self.show_headline(f"List of {syllabus.exam_code} blocks", style_as="h2")
