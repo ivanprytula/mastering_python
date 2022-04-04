@@ -19,6 +19,7 @@ Web version
 =====
 1. Multiplayer Arcanoid
 2. Chat
+3. Quiz with certification exams syllabuses
 #. TODOs
 
 
