@@ -9,7 +9,6 @@ class QuizBrain:
         self._levels = levels_full_names
         self.question_no = 0
         self.score = 0
-        # self.current_question = None
 
     def get_exams_codes(self) -> list[str]:
         return [syllabus.exam_code for syllabus in self.syllabuses]

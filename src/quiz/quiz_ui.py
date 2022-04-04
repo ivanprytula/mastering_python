@@ -64,7 +64,6 @@ syntax = Syntax(my_code, "python", theme="monokai", line_numbers=True)
 class QuizInterface:
     def __init__(self, quiz_brain: QuizBrain) -> None:
         self.quiz = quiz_brain
-        self.active_players: list = []
 
     @staticmethod
     def _horizontal_chars_deliminator(character: str, length_limit: int) -> None:
@@ -128,7 +127,6 @@ class QuizInterface:
                         "characters."
                     )
 
-                self.active_players.append(new_player)
                 self.show_headline(f"{new_player}, you are in the Game!", "", "", "h3")
                 break
             except ValueError:
@@ -139,9 +137,6 @@ class QuizInterface:
                 )
         else:
             self._go_to_game_respawn(enter_name_attempts)
-
-    def get_active_players(self) -> list:
-        return self.active_players
 
     def select_exam(self) -> Optional[LevelSyllabus]:
         """Returns instance of selected syllabus."""

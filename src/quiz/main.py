@@ -14,9 +14,6 @@ quiz = QuizBrain(question_bank, syllabuses_levels_full_names)
 
 quiz_ui = QuizInterface(quiz)
 
-# connected_players = quiz_ui.get_active_players()
-# print(connected_players)
-
 # If this program was run (instead of imported), run the game:
 if __name__ == "__main__":
     try:
