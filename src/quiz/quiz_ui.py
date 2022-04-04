@@ -4,6 +4,7 @@ from typing import Union, Iterable, Optional
 
 from rich.console import Console
 from rich.theme import Theme
+from rich.syntax import Syntax
 
 from question_models import LevelSyllabus
 from quiz_brain import QuizBrain
@@ -13,7 +14,7 @@ RESTART_MESSAGE = "You have used all your attempts to enter.\nGame is restarting
 AFFIRMATIVE_RESPONSES = ("y", "yes")
 NEGATIVE_RESPONSES = ("n", "no")
 QUIT_RESPONSES = ("q", "quit")
-YES_NO_QUESTION_SUFFIX = "yes[y] / no[n]"
+YES_NO_QUESTION_SUFFIX = "yes|y / no|n"
 
 logger = logging.getLogger(__name__)
 
@@ -41,6 +42,23 @@ PYTHON_ASCII_LOGO_BANNER_SHADOW = """
         ██║        ██║      ██║   ██║  ██║╚██████╔╝██║ ╚████║
         ╚═╝        ╚═╝      ╚═╝   ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
 """
+
+my_code = '''
+def iter_first_last(values: Iterable[T]) -> Iterable[Tuple[bool, bool, T]]:
+    """Iterate and generate a tuple with a flag for first and last value."""
+    iter_values = iter(values)
+    try:
+        previous_value = next(iter_values)
+    except StopIteration:
+        return
+    first = True
+    for value in iter_values:
+        yield first, False, previous_value
+        first = False
+        previous_value = value
+    yield first, True, previous_value
+'''
+syntax = Syntax(my_code, "python", theme="monokai", line_numbers=True)
 
 
 class QuizInterface:
@@ -75,8 +93,11 @@ class QuizInterface:
 
     @staticmethod
     def input_request(question: str, return_as_type: type = str) -> Union[str, int]:
-        input_answer = input(f"\n{question}: ")
+        console.print(f"\n{question}")
+        input_answer = console.input(">>> ")
         if return_as_type is int:
+            if not input_answer:
+                input_answer = 1
             return int(input_answer)
         else:
             return input_answer
@@ -89,13 +110,15 @@ class QuizInterface:
             if is_numbered:
                 console.print(f"{index + 1} {separator} {item}", style=style_as)
             else:
-                console.print(f" > {item}", style=style_as)
+                console.print(f" ^ {item}", style=style_as)
 
     def add_player(self) -> None:
         enter_name_attempts = 1
         while enter_name_attempts <= INPUT_ATTEMPTS_LIMIT:
             try:
-                new_player: Union[str, int] = self.input_request("Enter your name")
+                new_player: Union[str, int] = self.input_request(
+                    "What's your name? " "Press Enter to " "stay anonymous."
+                )
 
                 if not new_player:
                     new_player = "Anonymous"
@@ -138,8 +161,10 @@ class QuizInterface:
         selection_attempts = 1
         while selection_attempts <= INPUT_ATTEMPTS_LIMIT:
             try:
+                console.print()
                 exam_menu_number = self.input_request(
-                    "Select exam to test your knowledge", int
+                    "Select exam to test your knowledge. Press Enter for default 1.",
+                    int,
                 )
                 return self.quiz.get_exam_by_code(indexed_exams_codes[exam_menu_number])
             except KeyError:
@@ -169,8 +194,8 @@ class QuizInterface:
                 self.quiz.question_no += 1
 
                 user_response = self.input_request(
-                    f">>> Next question, skip this block "
-                    f" {YES_NO_QUESTION_SUFFIX} / quit[q]?"
+                    f"Next question, skip this block "
+                    f" {YES_NO_QUESTION_SUFFIX} / quit|q?"
                 )
                 if user_response in AFFIRMATIVE_RESPONSES:
                     continue
@@ -186,7 +211,7 @@ class QuizInterface:
 
     def quit_quiz(self):
         self.show_headline(
-            f"You tried to answer on {self.quiz.question_no} questions.",
+            f"You tried to answer to {self.quiz.question_no} questions.",
             "@@",
             "@@",
             style_as="quit_quiz",
@@ -223,6 +248,8 @@ class QuizInterface:
         self.start_practicing(syllabus)
 
     def start_the_game(self):
+        # console.print(syntax)
+
         self.quiz_greeting()
         self.add_player()
         self.show_syllabus_blocks(self.select_exam())
