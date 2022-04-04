@@ -117,7 +117,7 @@ class QuizInterface:
         while enter_name_attempts <= INPUT_ATTEMPTS_LIMIT:
             try:
                 new_player: Union[str, int] = self.input_request(
-                    "What's your name? " "Press Enter to " "stay anonymous."
+                    "What's your name? Press Enter to stay anonymous."
                 )
 
                 if not new_player:
@@ -194,7 +194,7 @@ class QuizInterface:
                 self.quiz.question_no += 1
 
                 user_response = self.input_request(
-                    f"Next question, skip this block "
+                    f"Next question, skip this block or quit? "
                     f" {YES_NO_QUESTION_SUFFIX} / quit|q?"
                 )
                 if user_response in AFFIRMATIVE_RESPONSES:
@@ -202,14 +202,21 @@ class QuizInterface:
                 elif user_response in NEGATIVE_RESPONSES:
                     break
                 elif user_response in QUIT_RESPONSES:
-                    self.quit_quiz()
-                else:
-                    console.log("Unknown character -> exit the quiz", style="warning")
                     self.show_headline("Oh, no...bye-bye!", ":((", "://", "warning")
-                    sys.exit(0)
-        self.quit_quiz()
+                    self.finish_quiz()
+                else:
+                    console.log(
+                        "Unknown character. Quiz turns to next question",
+                        style="warning",
+                    )
+            else:
+                console.print(
+                    "You have reached last question in this block.",
+                    style="bright_white italic",
+                )
+        self.finish_quiz()
 
-    def quit_quiz(self):
+    def finish_quiz(self):
         self.show_headline(
             f"You tried to answer to {self.quiz.question_no} questions.",
             "@@",

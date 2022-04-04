@@ -21,7 +21,7 @@ template_level_syllabus: list[dict] = [
     {
         "PCEP-30-0x": {
             "status": "...",
-            "blocks": [{"oder": 1, "title": "...", "items": ["description/keywords"]}],
+            "blocks": [{"order": 1, "title": "...", "items": ["description/keywords"]}],
         }
     }
 ]
@@ -32,7 +32,7 @@ junior_level_syllabuses = [
             "status": "Retiring December 31, 2022",
             "blocks": [
                 {
-                    "oder": 1,
+                    "order": 1,
                     "title": "Basic Concepts",
                     "items": [
                         "fundamental concepts: interpreting and the interpreter, "
@@ -49,7 +49,7 @@ junior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 2,
+                    "order": 2,
                     "title": "Data Types, Evaluations, and Basic I/O Operations",
                     "items": [
                         "operators: unary and binary, priorities and binding",
@@ -70,7 +70,7 @@ junior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 3,
+                    "order": 3,
                     "title": "Control Flow – loops and conditional blocks",
                     "items": [
                         "conditional statements: **if, if-else, if-elif, "
@@ -85,7 +85,7 @@ junior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 4,
+                    "order": 4,
                     "title": "Data Collections – Lists, Tuples, and Dictionaries",
                     "items": [
                         "simple lists: constructing vectors, indexing and slicing, "
@@ -109,7 +109,7 @@ junior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 5,
+                    "order": 5,
                     "title": "Functions",
                     "items": [
                         "defining and invoking your own functions and generators",
@@ -234,7 +234,7 @@ intermediate_level_syllabuses = [
             "status": "Active PVTCs",
             "blocks": [
                 {
-                    "oder": 1,
+                    "order": 1,
                     "title": "Control and Evaluations",
                     "items": [
                         "basic concepts: interpreting and the interpreter, "
@@ -271,7 +271,7 @@ intermediate_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 2,
+                    "order": 2,
                     "title": "Data Aggregates",
                     "items": [
                         "strings in detail: ASCII, UNICODE, UTF-8, immutability, "
@@ -297,7 +297,7 @@ intermediate_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 3,
+                    "order": 3,
                     "title": "Functions and Modules",
                     "items": [
                         "defining and invoking your own functions and generators",
@@ -324,7 +324,7 @@ intermediate_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 4,
+                    "order": 4,
                     "title": "Classes, Objects, and Exceptions",
                     "items": [
                         "defining your own classes, superclasses, subclasses, "
@@ -459,7 +459,7 @@ senior_level_syllabuses = [
             "status": "Active",
             "blocks": [
                 {
-                    "oder": 1,
+                    "order": 1,
                     "title": "Advanced Perspective of Classes and OOP in Python",
                     "items": [
                         "Classes, Instances, Attributes, Methods;",
@@ -479,7 +479,7 @@ senior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 2,
+                    "order": 2,
                     "title": "Python Enhancement Proposals (PEP)",
                     "items": [
                         "What is PEP?",
@@ -491,7 +491,7 @@ senior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 3,
+                    "order": 3,
                     "title": "GUI Programming",
                     "items": [
                         "What is GUI and where it comes from;",
@@ -503,7 +503,7 @@ senior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 4,
+                    "order": 4,
                     "title": "The Elements of Network Programming: Working with "
                     "RESTful APIs",
                     "items": [
@@ -520,7 +520,7 @@ senior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 5,
+                    "order": 5,
                     "title": "File Processing and Communicating with a Program’s "
                     "Environment",
                     "items": [
@@ -536,7 +536,7 @@ senior_level_syllabuses = [
             "status": "Active",
             "blocks": [
                 {
-                    "oder": 1,
+                    "order": 1,
                     "title": "Creating and Distributing Packages",
                     "items": [
                         "Using _pip_",
@@ -550,7 +550,7 @@ senior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 2,
+                    "order": 2,
                     "title": "Design Patterns",
                     "items": [
                         "Object-oriented design principles and the concept of design patterns",
@@ -566,7 +566,7 @@ senior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 3,
+                    "order": 3,
                     "title": "Interprocess Communication",
                     "items": [
                         "multiprocessing — Process-based parallelism",
@@ -578,14 +578,14 @@ senior_level_syllabuses = [
                     ],
                 },
                 {
-                    "oder": 4,
+                    "order": 4,
                     "title": "Python Network Programming",
                     "items": [
                         "Python Socket Module: Introduction to sockets; Server Socket Methods; Client socket methods; General socket methods; Client-Server vs. Peer-to-peer; Other Internet modules"
                     ],
                 },
                 {
-                    "oder": 5,
+                    "order": 5,
                     "title": "Python-MySQL Database Access",
                     "items": [
                         "Relational databases – fundamental principles and how to work with them",
