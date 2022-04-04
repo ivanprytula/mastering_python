@@ -1,4 +1,4 @@
-from typing import Union, Optional
+from typing import Optional
 
 from question_models import LevelSyllabus
 
@@ -8,7 +8,6 @@ class QuizBrain:
         self.syllabuses = syllabuses_data
         self._levels = levels_full_names
         self.question_no = 0
-        self.score = 0
 
     def get_exams_codes(self) -> list[str]:
         return [syllabus.exam_code for syllabus in self.syllabuses]

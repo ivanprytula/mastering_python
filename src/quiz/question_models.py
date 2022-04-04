@@ -5,10 +5,7 @@ from knowledge_base.idioms import *
 
 class LevelSyllabus:
     def __init__(self, data: dict) -> None:
-        # def __init__(self, question: str, correct_answer: str, choices: list):
         self.syllabus_info = data
-        # self.correct_answer = correct_answer
-        # self.choices = choices
 
     def get_blocks_titles(self) -> Generator:
         for block in self.syllabus_info[self.exam_code]["blocks"]:
