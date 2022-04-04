@@ -1,13 +1,13 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v4.1.0
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
     -   id: check-yaml
     -   id: check-added-large-files
 -   repo: https://github.com/psf/black
-    rev: 22.1.0
+    rev: 22.3.0
     hooks:
     - id: black
 -   repo: https://github.com/pycqa/flake8
@@ -15,7 +15,7 @@ repos:
     hooks:
     - id: flake8
     additional_dependencies: [
-        'flake8-bugbear:21.4.3'
+        "flake8-bugbear:22.3.23"
     ]
 -   repo: https://github.com/PyCQA/bandit
     rev: 1.7.4
@@ -23,7 +23,19 @@ repos:
       - id: bandit
         args: ["-r", "-lll", "-ii", "-x", "tests/"]
 -   repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v0.940
+    rev: v0.942
     hooks:
       - id: mypy
-        args: [ '--ignore-missing-imports', '--strict-equality','--no-implicit-optional' ]
+        args: [ "--ignore-missing-imports",
+                "--strict-equality",
+                "--no-implicit-optional",
+                "--allow-untyped-globals",
+                "--allow-redefinition",
+                "--install-types",
+                "--non-interactive",
+                "--show-error-codes",
+                "--pretty",
+                "--no-warn-no-return",
+                "--disable-error-code", "assignment",
+                "--disable-error-code", "index",
+        ]

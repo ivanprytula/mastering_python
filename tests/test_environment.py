@@ -1,6 +1,7 @@
 from pytest import mark
 
 
+@mark.skip
 @mark.env
 # @mark.skip(reason="broken by deploy sha:xxxxx")
 # @mark.xfail(reason="Env just like this....")

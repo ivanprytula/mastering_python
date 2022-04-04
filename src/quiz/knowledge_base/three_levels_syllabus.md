@@ -1,4 +1,4 @@
-# PCEP – Certified Entry-Level Python Programmer PCEP-30-01
+# PCEP – Certified Entry-Level Python Programmer PCEP-30-0x
 
 ## Objectives
 1. The fundamentals of computer programming, i.e.:
@@ -196,15 +196,14 @@
 - parameters vs. arguments, positional keyword and mixed argument passing, default parameter values
 - converting generator objects into lists using the **list()** function
 - name scopes, name hiding (shadowing), the **global** keyword
-- **lambda** functions, defining and using
-- **map(), filter(), reduce(), reversed(), sorted()** functions, and the **sort()** method
+- **lambda** functions, defining and using **map(), filter(), reduce(), reversed(), sorted()** functions, and the **sort()** method
 - the **if** operator
 - import directives, qualifying entities with module names, initializing modules
 - writing and using modules, the **\__name\__** variable
 - **pyc** file creation and usage
 - constructing and distributing packages, packages vs. directories, the role of the **\__init\__.py** file
 - hiding module entities
-- Python hashbangs, using multiline strings as module documentation
+- Python hashbang, using multiline strings as module documentation
 
 #### Block 4: Classes, Objects, and Exceptions
 - defining your own classes, superclasses, subclasses, inheritance,
@@ -232,9 +231,9 @@
   newline character translation, reading and writing files, **bytearray** objects
 - **read(), readinto(), readline(), write(), close()** methods
 
-#### Syllabus PCAP-31-03 (PVTCs, OnVUE)
+### Syllabus PCAP-31-03 (PVTCs, OnVUE)
 #### Block 1: Modules and Packages
-- import variants; advanced qualifiying for nested modules
+- import variants; advanced qualifying for nested modules
 - dir(); sys.path variable
 - math: ceil(), floor(), trunc(), factorial(), hypot(), sqrt(); random: random(), seed(), choice(), sample()
 - platform: platform(), machine(), processor(), system(), version(), python_implementation(), python_version_tuple()
@@ -272,7 +271,7 @@
 - __name__, __module__, __bases__ properties, __str__() method
 - multiple inheritance, diamonds
 
-#### Another Syllabus. Block 5: Miscellaneous (List Comprehensions, Lambdas, Closures, and I/O Operations)
+#### Block 5: Miscellaneous (List Comprehensions, Lambdas, Closures, and I/O Operations)
 - list comprehension: if operator, using list comprehensions
 - lambdas: defining and using lambdas, self-defined functions taking lambda as as arguments; map(), filter();
 - closures: meaning, defining, and using closures
@@ -284,7 +283,7 @@
 ---
 
 # PCPP1 – Certified Professional in Python Programming 1 PCPP-32-10x
-### Syllabus
+### Syllabus PCPP-32-101
 #### Block 1: Advanced Perspective of Classes and OOP in Python
 - Classes, Instances, Attributes, Methods;
 - Working with class and instance data;
@@ -314,11 +313,7 @@
 - Constructing a GUI – basic blocks and conventions;
 - Event-driven programming;
 - Popular GUI environments and toolkits;
-- _tkinter_  Python interface to Tcl/Tk (
-  tkinter’s application life cycle;
-  widgets, windows and events; s
-  ample applications\
-  )
+- _tkinter_  Python interface to Tcl/Tk ( tkinter’s application life cycle; widgets, windows and events; sample applications)
 - _pygame_ – a simple way of developing multimedia applications.
 
 #### Block 4: The Elements of Network Programming: Working with RESTful APIs
@@ -347,7 +342,7 @@
     - _time_ – time access and conversions.
 
 # PCPP2 – Certified Professional in Python Programming 2 PCPP-32-20x
-### Syllabus
+### Syllabus PCPP-32-201
 #### Block 1: Creating and Distributing Packages
 - Using _pip_
 - Basic directory structure
@@ -399,18 +394,3 @@
     - db read
     - db update
     - db delete
-
-# PYTHON ITA CERTIFICATION
-## Python Web / Integration Certifications
-- Process Planning (SDLC)
-- OOD
-- DB Design
-- SQL
-- DB Access
-- Programming language
-- Code Quality
-- Automated Testing
-- Web UI // Networking
-- Web server applications // Unix Server Administration
-- Product builds and Continuous Integration
-- Managing Versions
