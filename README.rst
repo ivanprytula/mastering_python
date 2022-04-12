@@ -17,9 +17,8 @@ Web version
 
 [TOC]
 =====
-1. Multiplayer Arcanoid
-2. Chat
-3. Quiz with certification exams syllabuses
+1. Chat
+2. Quiz with certification exams syllabuses
 #. TODOs
 
 
